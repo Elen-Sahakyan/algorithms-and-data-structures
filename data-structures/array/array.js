@@ -28,7 +28,7 @@ class DynamicArray {
     constructor (cap = 0, fill = 0) {
         assert(Validators.isValidCapacity(cap), 'capacity must be an integer >= 0');
         assert(Validators.isValidValue(fill), "fill-value must be an integer");
-        this.#arr = new Int32Array(cap);
+        this.#arr = new Int32Array(cap).fill(fill);
         this.#size = 0;
         this.#capacity = cap;
     
@@ -496,23 +496,23 @@ class DynamicArray {
     }
 }
 
-const arr = new DynamicArray(5);
+// const arr = new DynamicArray(5);
 
-for(let i = 5; i < 40; ++i) {
-    arr.pushBack(i);
-}
+// for(let i = 1; i <= 80; ++i) {
+//     arr.pushBack(i);
+// }
 
-const arr1 = new DynamicArray(4, 3);
+// const arr1 = new DynamicArray(4, 3);
 
-for(let i = 0; i < 10; ++i) {
-    arr1.pushBack(i);
-}
+// for(let i = 0; i < 10; ++i) {
+//     arr1.pushBack(i);
+// }
 
-const arr2 = new DynamicArray(4, 3);
+// const arr2 = new DynamicArray(4, 3);
 
 // console.log(`The size of array is: ${arr.size()}`);
 // console.log(`Capacity is: ${arr.capacity()}`);
-// console.log(`access value: ${arr.at(0)}`);
+// console.log(`access value: ${arr.at(79)}`);
 // console.log(`array is empty: ${arr.empty()}`);
 // arr.set(0, 100);
 // console.log(`first element ${arr.front()}`);
