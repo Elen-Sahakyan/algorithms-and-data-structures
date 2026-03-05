@@ -59,6 +59,7 @@ class Stack {
     }
 }
 
+module.exports = Stack;
 
 // const stack = new Stack(10);
 
