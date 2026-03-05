@@ -82,6 +82,8 @@ class Queue {
 
 }
 
+module.exports = Queue;
+
 // const queue = new Queue(10);
 
 // console.log(queue.is_empty());
