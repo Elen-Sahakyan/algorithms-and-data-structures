@@ -155,7 +155,7 @@ class DynamicArray {
         
         //shift elements to the left by one
         for(let i = pos; i < this.#size - 1; ++i) {
-            [this.#arr[i], this.#arr[i + 1]] = [this.#arr[i + 1], this.#arr[i]];
+            this.#arr[i] = this.#arr[i + 1];
         }
 
         --this.#size;
@@ -482,11 +482,7 @@ class DynamicArray {
     equals(other) {
         if(this.#size === other.size()) {
             for(let i = 0; i < this.#size; ++i) {
-                let equal = false;
-                if(this.#arr[i] == other.at(i)) {
-                    equal = true;
-                }
-                if(!equal) {
+                if(this.#arr[i] !== other.at(i)) {
                     return false;
                 }
             }
